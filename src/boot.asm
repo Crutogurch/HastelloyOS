@@ -48,10 +48,13 @@ GDT_descriptor:
 
 
 [bits 32]
+[extern _start]
+
 start_protected_mode:
     mov al, 'A'
     mov ah, 0xcf
     mov [0xb8000], ax
+    call _start
     jmp $
 
                                      
