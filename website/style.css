@@ -35,7 +35,7 @@ body{
   }
   
   #showcase{
-    background-image:url('imgs/p.jpg');
+    background-color:black;
     background-position: center right;
     height: 300px;
     margin-bottom: 30px;
