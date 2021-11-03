@@ -8,7 +8,9 @@ DetectCPUID:
     xor eax, 1 << 21
 
     push eax
-    popfd 
+    popfd
+    
+    pushfd
     pop eax
 
     push ecx

@@ -10,6 +10,7 @@ SetUpIdentityPaging:
     add edi, 0x1000
     mov dword [edi], 0x4003
     add edi, 0x1000
+    
     mov ebx, 0x00000003
     mov ecx, 512
     .SetEntry:

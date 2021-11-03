@@ -27,14 +27,12 @@ EnableA20:
 %include "SimplePaging.asm"
 
 StartProtectedMode:
-
     mov ax, dataseg
     mov ds, ax
     mov ss, ax
     mov es, ax
     mov fs, ax
     mov gs, ax
-
     mov [0xb8000], byte 'H'
     mov [0xb8002], byte 'a'
     mov [0xb8004], byte 's'
@@ -59,6 +57,10 @@ StartProtectedMode:
 [bits 64]
 
 Start64Bit:
+    mov edi, 0xb8000
+    mov rax, 0x1f201f201f201f20
+    mov ecx, 500
+    rep stosq
     jmp $
 
 times 2048-($-$$) db 0
